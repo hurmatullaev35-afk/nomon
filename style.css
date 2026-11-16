@@ -1,0 +1,76 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; color: #1d1d1f; background: #fff; }
+.navbar { height: 48px; background: rgba(18,18,18,.94); color: #f5f5f7; display:flex; align-items:center; justify-content:center; gap:55px; position:sticky; top:0; z-index:10; backdrop-filter: blur(16px); }
+.logo { color:inherit; font-size:25px; text-decoration:none; line-height:1; }
+.navbar nav { display:flex; gap:38px; }
+.navbar nav a { color:#e8e8ed; text-decoration:none; font-size:12px; opacity:.9; transition:.2s; }
+.navbar nav a:hover { opacity:.6; }
+.menu-btn { display:none; background:none; color:white; border:0; font-size:22px; }
+.hero { min-height:650px; text-align:center; overflow:hidden; position:relative; padding:66px 20px 0; margin-bottom:12px; }
+.hero-dark { background: radial-gradient(ellipse at 50% 88%, #333 0, #111 50%, #050505 100%); color:#f5f5f7; }
+.hero-light { background:#f5f5f7; color:#1d1d1f; }
+.hero-watch { background:linear-gradient(135deg,#101820,#263b4d 55%,#111); color:white; }
+.hero-copy { position:relative; z-index:2; }
+.eyebrow { font-size:12px; letter-spacing:2px; font-weight:700; opacity:.7; margin-bottom:12px; }
+h1,h2 { font-size:clamp(40px,6vw,66px); letter-spacing:-2.8px; font-weight:650; }
+.subtitle { font-size:clamp(17px,2vw,23px); margin:10px 0 22px; opacity:.9; }
+.actions { display:flex; justify-content:center; align-items:center; gap:14px; }
+.btn { display:inline-block; border-radius:24px; padding:10px 19px; text-decoration:none; font-size:14px; transition:transform .2s,opacity .2s; }
+.btn:hover { transform:translateY(-2px); opacity:.85; }
+.primary { background:#0071e3; color:white; }
+.outline { border:1px solid #2997ff; color:#2997ff; }
+.hero-dark .outline,.hero-watch .outline { color:#79baff; border-color:#79baff; }
+.text-link { color:#06c; }
+.hero-image,.wide-image,.watch-image { margin:40px auto 0; background-position:center; background-repeat:no-repeat; background-size:contain; }
+.phone-image { width:min(760px,90vw); height:390px; background-image:url('https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=1400&q=85'); background-size:cover; background-position:center 42%; border-radius:30px 30px 0 0; box-shadow:0 -15px 70px #0008; }
+.wide-image { width:min(850px,90vw); height:340px; background-image:url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1500&q=85'); border-radius:22px 22px 0 0; }
+.watch-image { width:min(650px,85vw); height:350px; background-image:url('https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=1300&q=85'); border-radius:35px 35px 0 0; }
+.product-section { padding:85px 6vw 100px; background:#fff; }
+.section-heading { text-align:center; margin-bottom:42px; }
+.section-heading h2 { font-size:clamp(30px,4vw,46px); letter-spacing:-1.8px; }
+.product-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; max-width:1200px; margin:auto; }
+.product-card { background:#f5f5f7; text-align:center; border-radius:24px; padding:28px 20px 35px; overflow:hidden; }
+.product-card h3 { font-size:27px; margin:8px 0; }
+.product-card p { color:#6e6e73; margin-bottom:14px; }
+.product-card a, footer a { color:#06c; text-decoration:none; }
+.card-image { height:220px; background-size:cover; background-position:center; border-radius:15px; margin-bottom:20px; }
+.card-phone { background-image:url('https://images.unsplash.com/photo-1605236453806-6ff36851218e?auto=format&fit=crop&w=900&q=80'); }
+.card-ipad { background-image:url('https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=900&q=80'); }
+.card-airpods { background-image:url('https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=900&q=80'); }
+footer { background:#f5f5f7; color:#6e6e73; padding:28px 8vw; font-size:12px; line-height:1.8; text-align:center; }
+footer a { display:inline-block; margin-top:8px; }
+@media (max-width:700px) {
+ .navbar { justify-content:space-between; padding:0 20px; }
+ .navbar nav { display:none; position:absolute; top:48px; left:0; right:0; padding:20px; background:#171717; flex-direction:column; gap:20px; }
+ .navbar nav.open { display:flex; }
+ .menu-btn { display:block; cursor:pointer; }
+ .hero { min-height:560px; padding-top:55px; }
+ .phone-image { height:300px; }
+ .wide-image,.watch-image { height:260px; }
+ .product-grid { grid-template-columns:1fr; }
+ .product-section { padding:65px 18px; }
+}
+
+/* Avtomatik karusel */
+.carousel-section { padding: 75px 5vw 90px; background: #f5f5f7; overflow: hidden; }
+.carousel-hint { color:#86868b; font-size:13px; margin-top:10px; }
+.carousel { max-width:1180px; margin:0 auto; overflow:hidden; border-radius:28px; }
+.carousel-track { display:flex; transition:transform .75s cubic-bezier(.22,.8,.25,1); }
+.carousel-slide { min-width:100%; min-height:370px; padding:55px 8%; display:flex; align-items:center; color:white; background-size:cover; background-position:center; position:relative; isolation:isolate; }
+.carousel-slide::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(0,0,0,.76),rgba(0,0,0,.12)); z-index:-1; }
+.carousel-slide span { font-size:12px; letter-spacing:3px; font-weight:700; opacity:.8; }
+.carousel-slide h3 { font-size:clamp(32px,5vw,55px); line-height:1.05; letter-spacing:-1.8px; margin:14px 0; }
+.carousel-slide p { font-size:16px; max-width:390px; opacity:.9; }
+.slide-one { background-image:url('https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=1600&q=85'); }
+.slide-two { background-image:url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1600&q=85'); }
+.slide-three { background-image:url('https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=1600&q=85'); }
+.slide-four { background-image:url('https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=1600&q=85'); }
+.carousel-dots { display:flex; justify-content:center; gap:10px; padding:18px 0 0; }
+.carousel-dot { width:8px; height:8px; border:0; border-radius:50%; background:#b8b8bd; cursor:pointer; transition:all .25s; }
+.carousel-dot.active { width:25px; border-radius:8px; background:#0071e3; }
+@media(max-width:700px) {
+ .carousel-section { padding:55px 15px 65px; }
+ .carousel-slide { min-height:310px; padding:35px 25px; }
+ .carousel-slide p { font-size:14px; max-width:270px; }
+}

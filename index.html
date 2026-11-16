@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apple mahsulotlari uslubidagi zamonaviy texnologiya sahifasi">
+  <title> Ayub Store — Texnologiya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#home" aria-label="Bosh sahifa"></a>
+    <nav id="navLinks">
+      <a href="#iphone">iPhone</a>
+      <a href="#mac">Mac</a>
+      <a href="#ipad">iPad</a>
+      <a href="#watch">Watch</a>
+      <a href="#airpods">AirPods</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menyuni ochish">☰</button>
+  </header>
+
+  <main id="home">
+    <section class="hero hero-dark">
+      <div class="hero-copy">
+        <p class="eyebrow">YANGI AVLOD TEXNOLOGIYASI</p>
+        <h1>iPhone 17 Pro</h1>
+        <p class="subtitle">Kuch. Tezlik. Mukammal imkoniyatlar.</p>
+        <div class="actions">
+          <a class="btn primary" href="#iphone">Batafsil</a>
+          <a class="btn outline" href="#iphone">Ko‘rib chiqish</a>
+        </div>
+      </div>
+      <div class="hero-image phone-image" role="img" aria-label="Zamonaviy smartfon tasviri"></div>
+    </section>
+
+    <section class="hero hero-light" id="mac">
+      <div class="hero-copy">
+        <p class="eyebrow">YANGI MACBOOK</p>
+        <h2>MacBook Air</h2>
+        <p class="subtitle">Yengil. Yupqa. Hayratlanarli darajada qudratli.</p>
+        <div class="actions">
+          <a class="btn primary" href="#products">Batafsil</a>
+          <a class="btn text-link" href="#products">Xarid qilish ›</a>
+        </div>
+      </div>
+      <div class="wide-image laptop-image" role="img" aria-label="Noutbuk tasviri"></div>
+    </section>
+
+    <section class="hero hero-watch" id="watch">
+      <div class="hero-copy">
+        <p class="eyebrow">SOG‘LIQ VA FAOL HAYOT</p>
+        <h2>Apple Watch</h2>
+        <p class="subtitle">Har bir kuningizni yangi imkoniyatlar bilan boshlang.</p>
+        <div class="actions">
+          <a class="btn primary" href="#products">Batafsil</a>
+          <a class="btn outline" href="#products">Modellar</a>
+        </div>
+      </div>
+      <div class="watch-image" role="img" aria-label="Aqlli soat tasviri"></div>
+    </section>
+
+    <section class="product-section" id="products">
+      <div class="section-heading">
+        <p class="eyebrow">TANLANGAN MAHSULOTLAR</p>
+        <h2>Sevimli qurilmangizni toping.</h2>
+      </div>
+      <div class="product-grid">
+        <article class="product-card" id="iphone">
+          <div class="card-image card-phone"></div>
+          <h3>iPhone</h3><p>Har lahza uchun ajoyib kamera.</p>
+          <a href="#home">Batafsil ›</a>
+        </article>
+        <article class="product-card" id="ipad">
+          <div class="card-image card-ipad"></div>
+          <h3>iPad</h3><p>Ijod va unumdorlik bir joyda.</p>
+          <a href="#home">Batafsil ›</a>
+        </article>
+        <article class="product-card" id="airpods">
+          <div class="card-image card-airpods"></div>
+          <h3>AirPods</h3><p>Sevimli musiqangiz — yanada tiniq.</p>
+          <a href="#home">Batafsil ›</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="carousel-section" aria-label="Mahsulotlar karuseli">
+      <div class="section-heading">
+        <p class="eyebrow">YANGI IMKONIYATLAR</p>
+        <h2>Texnologiya olamiga sho‘ng‘ing.</h2>
+        <p class="carousel-hint">Slaydlar avtomatik almashadi</p>
+      </div>
+      <div class="carousel" id="autoCarousel">
+        <div class="carousel-track">
+          <article class="carousel-slide slide-one">
+            <div><span>iPHONE</span><h3>Har bir detalda<br>mukammallik.</h3><p>Kundalik hayotingiz uchun yangi imkoniyatlar.</p></div>
+          </article>
+          <article class="carousel-slide slide-two">
+            <div><span>MACBOOK</span><h3>G‘oyalaringizga<br>qanot bering.</h3><p>Ish, ijod va o‘qish uchun qulay tanlov.</p></div>
+          </article>
+          <article class="carousel-slide slide-three">
+            <div><span>APPLE WATCH</span><h3>Har kuningiz<br>nazorat ostida.</h3><p>Faollik va kundalik rejalaringiz bir joyda.</p></div>
+          </article>
+          <article class="carousel-slide slide-four">
+            <div><span>AIRPODS</span><h3>Ovozni his qiling.</h3><p>Musiqa va suhbatlar uchun qulaylik.</p></div>
+          </article>
+        </div>
+        <div class="carousel-dots" aria-label="Karusel slaydlari">
+          <button class="carousel-dot active" aria-label="1-slayd"></button>
+          <button class="carousel-dot" aria-label="2-slayd"></button>
+          <button class="carousel-dot" aria-label="3-slayd"></button>
+          <button class="carousel-dot" aria-label="4-slayd"></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Ayub Store. Barcha huquqlar himoyalangan.</p>
+    <p>Ushbu sahifa Apple uslubidan ilhomlangan mustaqil demo loyihadir. Rasmiy Apple sayti emas.</p>
+    <a href="#home">Yuqoriga qaytish ↑</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
